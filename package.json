@@ -1,0 +1,20 @@
+{
+    "name": "nodejs-crud-tranning",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon",
+        "test": "mocha --watch ./test/"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "express": "^4.16.3",
+        "mocha": "^5.2.0",
+        "mysql": "^2.15.0",
+        "nodemon": "^1.17.5",
+        "validate.js": "^0.12.0"
+    }
+}
