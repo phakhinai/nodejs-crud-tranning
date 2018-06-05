@@ -14,18 +14,18 @@ describe("Run Test PostComponent", () => {
               id: 1,
               post_image:
                 "https://www.parpaikin.com/wp-content/uploads/2017/12/04-30.jpg",
-              post_category: "อาหารไทย 1",
-              post_name: "อาหารไทย",
-              post_detail: "เมนูอาหาร อาหารไทยง่ายๆ ทำกินเองที่บ้านได้ กับข้าว",
+              post_category: "post_category 1",
+              post_name: "post_name 1",
+              post_detail: "post_detail 1",
               post_date: new Date()
             },
             {
               id: 2,
               post_image:
                 "https://www.parpaikin.com/wp-content/uploads/2017/12/04-30.jpg",
-              post_category: "อาหารไทย 2",
-              post_name: "อาหารไทย",
-              post_detail: "เมนูอาหาร อาหารไทยง่ายๆ ทำกินเองที่บ้านได้ กับข้าว",
+              post_category: "post_category 2",
+              post_name: "post_name 2",
+              post_detail: "post_detail 2",
               post_date: new Date()
             }
           ];
