@@ -1,5 +1,7 @@
 const mysql = require("mysql");
+const mongoose = require("mongoose");
 
+// ฐานข้อมูล MySQL
 class MySqlDatabase {
   constructor() {
     this.connection = mysql.createPool({
@@ -20,4 +22,32 @@ class MySqlDatabase {
   }
 }
 
-module.exports = { MySqlDatabase };
+// ฐานข้อมูล MongoDB
+class MongoDatabase {
+  constructor(db = mongoose) {
+    this.mongoose = db;
+    this.mongoose.connect("mongodb://localhost/nodejs_crud");
+    this.posts = this.mongoose.model(
+      "posts",
+      new this.mongoose.Schema(
+        {
+          post_image: String,
+          post_category: String,
+          post_name: String,
+          post_detail: String,
+          post_date: {
+            type: Date,
+            default: Date.now
+          }
+        },
+        {
+          toJSON: {
+            virtuals: true
+          }
+        }
+      )
+    );
+  }
+}
+
+module.exports = { MySqlDatabase, MongoDatabase };
